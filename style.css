@@ -1,6 +1,6 @@
 body {
 	background:#000;
-	font-family:Menlo;
+	font-family: "Menlo";
 	color:#ccc;
 }
 
@@ -16,4 +16,15 @@ canvas {
 
 a {
 	cursor:pointer;
+}
+
+input#label {
+	width: 498px;
+	font-size: 22px;
+	background-color: #272822;
+	color: #fff;
+	border: none;
+	text-align: center;
+	font-family: "Menlo";
+	padding: 0.5em 0.1em;
 }

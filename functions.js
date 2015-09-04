@@ -1,3 +1,5 @@
+var labelText = "git grep 'objectName' -- '*.php'";
+
 function draw(ctx) {
 	var canvas = $("canvas");
 	canvas.width=1012;//horizontal resolution (?) - increase for better looking text
@@ -13,7 +15,7 @@ function draw(ctx) {
 	var canvas = document.getElementById('canvas');
 	var x = canvas.width / 2;
 	var y = canvas.height / 2 - fontSize / 2;   
-	var fillText = "git grep 'objectName' -- '*.php'";
+	var fillText = labelText;
 
 	ctx.textBaseline = "top";
 	ctx.font = fontSize+"px Menlo";
@@ -31,4 +33,9 @@ function downloadCanvas(link, canvasId, filename) {
 
 document.getElementById('download').addEventListener('click', function() {
 	downloadCanvas(this, 'canvas', 'test.png');
+}, false);
+
+document.getElementById('label').addEventListener('keyup', function() {
+	labelText = this.value;
+	draw(document.getElementById('canvas').getContext('2d'));
 }, false);
