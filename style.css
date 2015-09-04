@@ -1,0 +1,19 @@
+body {
+	background:#000;
+	font-family:Menlo;
+	color:#ccc;
+}
+
+h1 {
+	text-transform:uppercase;
+}
+
+canvas {
+	color:#f1f1f1;
+	width:506px;
+	height:220px;
+}
+
+a {
+	cursor:pointer;
+}

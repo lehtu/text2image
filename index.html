@@ -8,6 +8,15 @@
 </head>
 
 <body>
-	Content of the document......
+	<center>
+	<h1>text to image</h1>
+	<canvas id="canvas"></canvas><br><br>
+	<a id="download">Download as image</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mootools/1.5.1/mootools-core-full-compat.min.js"></script>
+	<script src="functions.js"></script>
+	<script>
+		draw(document.getElementById('canvas').getContext('2d'));
+	</script>
 </body>
 </html>
