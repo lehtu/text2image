@@ -18,7 +18,7 @@ function draw(ctx) {
 	var fillText = labelText;
 
 	ctx.textBaseline = "top";
-	ctx.font = fontSize+"px Menlo";
+	ctx.font = fontSize+"px Inconsolata";
 
 	ctx.textAlign = 'center';
 

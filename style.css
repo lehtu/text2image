@@ -1,6 +1,6 @@
 body {
 	background:#000;
-	font-family: "Menlo";
+	font-family: "Inconsolata";
 	color:#ccc;
 }
 
@@ -25,6 +25,6 @@ input#label {
 	color: #fff;
 	border: none;
 	text-align: center;
-	font-family: "Menlo";
+	font-family: "Inconsolata";
 	padding: 0.5em 0.1em;
 }
