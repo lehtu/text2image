@@ -1,4 +1,5 @@
-var labelText = "git grep 'objectName' -- '*.php'";
+var defaultLabelText = "git grep 'objectName' -- '*.php'";
+var labelText = defaultLabelText;
 var maxChars = 44;
 
 function draw(ctx) {
@@ -16,7 +17,7 @@ function draw(ctx) {
 	var canvas = document.getElementById('canvas');
 	var x = canvas.width / 2;
 	var y = canvas.height / 2 - fontSize / 2;   
-	var fillText = labelText;
+	var fillText = labelText.substr(0, maxChars);
 
 	ctx.textBaseline = "top";
 	ctx.font = fontSize+"px Inconsolata";
@@ -45,6 +46,10 @@ document.getElementById('label').addEventListener('keyup', function() {
 		document.getElementById('count').style.color = "red";
 	} else {
 		document.getElementById('count').style.color = "#f1f1f1";
-		draw(document.getElementById('canvas').getContext('2d'));
+		if (charCount == 0) {
+			labelText = defaultLabelText;
+		}
 	}
+
+	draw(document.getElementById('canvas').getContext('2d'));
 }, false);
