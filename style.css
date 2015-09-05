@@ -8,6 +8,12 @@ h1 {
 	text-transform:uppercase;
 }
 
+div#canvasContainer {
+	width:506px;
+	height:220px;
+	position: relative;
+}
+
 canvas {
 	color:#f1f1f1;
 	width:506px;
@@ -19,7 +25,7 @@ a {
 }
 
 input#label {
-	width: 498px;
+	width: 506px;
 	font-size: 22px;
 	background-color: #272822;
 	color: #fff;
@@ -27,4 +33,14 @@ input#label {
 	text-align: center;
 	font-family: "Inconsolata";
 	padding: 0.5em 0.1em;
+}
+
+div#count {
+	font-size:8em;
+	width:145px;
+	text-align: right;
+	display:block;
+	position:absolute;
+	right:-145px;
+	top:35px;
 }

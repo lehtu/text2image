@@ -1,4 +1,5 @@
 var labelText = "git grep 'objectName' -- '*.php'";
+var maxChars = 44;
 
 function draw(ctx) {
 	var canvas = $("canvas");
@@ -37,5 +38,13 @@ document.getElementById('download').addEventListener('click', function() {
 
 document.getElementById('label').addEventListener('keyup', function() {
 	labelText = this.value;
-	draw(document.getElementById('canvas').getContext('2d'));
+	charCount = labelText.length;
+	document.getElementById('count').innerHTML = maxChars - charCount;
+
+	if (charCount > maxChars) {
+		document.getElementById('count').style.color = "red";
+	} else {
+		document.getElementById('count').style.color = "#f1f1f1";
+		draw(document.getElementById('canvas').getContext('2d'));
+	}
 }, false);
